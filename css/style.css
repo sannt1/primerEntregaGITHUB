@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla&family=Tiro+Devanagari+Sanskrit:ital@1&display=swap');
+/* FUENTES
+Para titulos: Tiro Devanagari Sanskrit
+Para texto normal: Tiro Banlga
+*/
+html {
+    font-size: 100%;
+    width: 100%;
+}
+
+
+ul{
+    list-style: none;
+    font-size:0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+li{
+    display: inline-block;
+    width: 20%;
+    position: relative;
+    font-size: 14px;
+
+}
+
+ul ul{
+    position: absolute;
+    display: none;
+}
+
+ul ul li{
+    display: block;
+}
+
+ul li:hover ul{
+    display: block;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h1,h2,h3 {
+    font-family: Tiro Devanagari Sanskrit;
+}
+
+p{
+    font-family: Tiro Bangla;
+    line-height: 2.5rem;
+    font-style: italic;
+} 
+
+
+nav {
+    width: 100%;
+    background-color: rgba(98, 163, 248, 0.281);
+    cursor:crosshair
+}
+nav ul{
+    list-style-type: none;
+    background-color: rgba(98, 163, 248, 0.281);
+}
+nav ul li a{
+    font-family: Tiro Bangla;
+    text-decoration: none;
+    background-color: rgba(98, 163, 248, 0.281);
+}
+.conteiner{
+    border: none;
+    background-color: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.conteiner1{
+    border: groove;
+    background-color: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 50px;  
+}
+
+.text-center{
+    text-align: center;
+}
+.text-derecha{
+    text-align: right;
+}
+
+.imagen-principal{
+    width: 100%;
+}
+
+.esquinas-redondas{
+    border-radius: 150px;
+}
+
+.imagen-logos{
+    width: 150px; 
+    height: 75%;
+}
+
+.texto-gris{
+    color: rgba(30, 4, 177, 0.932)
+}
+
+.letra-chica{ 
+    font-size: 12px;
+}
+
+.textoDestacado{
+	background-color: rgba(255, 252, 0, .4);
+    justify-content: center;
+}
+
+footer {
+    width: 100%;
+    padding: 50px 0px;
+}
+
+.box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box__copyright p{
+    margin-top: 20px;
+    color: #7A7A7A;
+}
+
+.box__copyright hr{
+    height: 1px;
+    color: #7A7A7A;
+}
+
+.brand_img {
+    width: 150px;
+}
+
+.icono_redes{ 
+    width: 50px;
+}
+
+#productos .galeria{
+    margin: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+#productos .galeria figure{
+    text-align: center;
+    width:30% ;
+}
+
+#productos .galeria figure img{
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    width: 50%;
+}
+
+#productos .galeria figure figcaption{
+    padding: 10px 0;
+    background-color: white;
+}
+
+.transform :hover{
+    transform: translateX(5px);
+    cursor: wait;
+}
+
+@keyframes movete{
+    0%{background-color: aqua}
+    25%{background-color: blue}
+    50%{background-color: blueviolet}
+    75%{background-color: grey}
+    100%{background-color: rgba(98, 163, 248, 0.281)}
+}
+
+.movete{
+    animation-name: movete;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+
+/* @keyframes textAlpha{
+    from{opacity: 0}
+    to{opacity: 1}
+} */
+
+button{
+    width: 100px;
+    height: 35px;
+    border: solid;
+    background: linear-gradient(to top, blue, red);
+    margin-left: 50px;
+}
+
+body{
+    background-image: url(../imagenes/fondoprincipal.png);
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 15vh 70vh 5vh;
+    /*grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px auto 100px;*/
+    grid-template-areas:  
+    "header header"
+    "productos productos"   
+    "footer footer";
+}
+/* .grilla{
+    margin: 2.5%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-gap: 2%;
+} */
+/*DESKTOP*/
+/* @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .contenedor{
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: auto auto 350px;
+		grid-template-areas: 
+        "header header"
+        "aside productos"
+        "footer footer";
+    }
+    .grilla{
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: auto auto 350px;
+		grid-template-areas: 
+        "header header"
+        "aside productos"
+        "footer footer";
+    }
+} */
+
+@media screen and (max-width: 600px) {
+    .contenedor{
+        display: grid;
+        margin-top: 5px;
+        justify-items: center;
+        grid-template-areas: 
+        "header"
+        "productos"
+        "footer"
+        ;
+    }
+    .grilla{
+        display: grid;
+        grid-template-rows: 50% 50%;
+        justify-items: center;       
+    }
+    .conteiner1{
+        border: groove;
+        background-color: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: auto;
+        margin-bottom: 50px;  
+    }
+}
+
+@media screen and (min-width: 601px){
+    .contenedor{
+        grid-template-columns: 20% 70% 10%;
+        grid-template-rows: auto auto 250px;
+        grid-template-areas:  
+        "nav nav nav"
+        "header header header"
+        "productos productos productos"
+        "footer footer footer";
+    }
+    .grilla{
+        margin: 2.5%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 2%;
+}
+}
+.header{
+    grid-area: header;
+} 
+.footer{
+    grid-area: footer;
+}
+.productos{
+    grid-area: productos;
+    display: flex;
+    justify-content:space-around;
+    align-items: stretch;
+    flex-direction: column;
+    border-radius: 3px;
+    padding: 10px;
+    margin-top: 30px; 
+}
+.aside{
+    grid-area: aside;
+    display: flex;
+    justify-content:space-around;
+    align-items: stretch;
+    flex-direction: column;
+    border-radius: 3px;
+    padding: 10px; 
+}
+.nosotros{
+    grid-area: nosotros;
+}
+.nav{
+    grid-area: nav;
+}
